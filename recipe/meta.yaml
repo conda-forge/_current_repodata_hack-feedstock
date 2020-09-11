@@ -14,37 +14,49 @@ outputs:
     build:
       skip: True  # [win or osx]
     requirements:
+      - libgcc-devel_linux-64 7.5.*
       - gcc_linux-64 7.5.*
+      - gcc_impl_linux-64 7.5.*
 
   - name: _current_repodata_hack_gcc_linux_64_84
     build:
       skip: True  # [win or osx]
     requirements:
+      - libgcc-devel_linux-64 8.4.*
       - gcc_linux-64 8.4.*
+      - gcc_impl_linux-64 8.4.*
   
   - name: _current_repodata_hack_gcc_linux_aarch64_75
     build:
       skip: True  # [win or osx]
     requirements:
+      - libgcc-devel_linux-aarch64 7.5.*
       - gcc_linux-aarch64 7.5.*
+      - gcc_impl_linux-aarch64 7.5.*
   
   - name: _current_repodata_hack_gcc_linux_aarch64_84
     build:
       skip: True  # [win or osx]
     requirements:
+      - libgcc-devel_linux-aarch64 8.4.*
       - gcc_linux-aarch64 8.4.*
+      - gcc_impl_linux-aarch64 8.4.*
   
   - name: _current_repodata_hack_gcc_linux_ppc64le_75
     build:
       skip: True  # [win or osx]
     requirements:
+      - libgcc-devel_linux-ppc64le 7.5.*
       - gcc_linux-ppc64le 7.5.*
+      - gcc_impl_linux-ppc64le 7.5.*
   
   - name: _current_repodata_hack_gcc_linux_ppc64le_84
     build:
       skip: True  # [win or osx]
     requirements:
+      - libgcc-devel_linux-ppc64le 8.4.*
       - gcc_linux-ppc64le 8.4.*
+      - gcc_impl_linux-ppc64le 8.4.*
 
 about:
   home: https://github.com/conda-forge/_current_repodata_hack-feedstock
