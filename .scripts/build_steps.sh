@@ -29,7 +29,7 @@ source run_conda_forge_build_setup
 # make the build number clobber
 make_build_number "${FEEDSTOCK_ROOT}" "${RECIPE_ROOT}" "${CONFIG_FILE}"
 
-conda build "${RECIPE_ROOT}" -m "${CI_SUPPORT}/${CONFIG}.yaml" \
+conda build --no-test "${RECIPE_ROOT}" -m "${CI_SUPPORT}/${CONFIG}.yaml" \
     --suppress-variables ${EXTRA_CB_OPTIONS:-} \
     --clobber-file "${CI_SUPPORT}/clobber_${CONFIG}.yaml"
 validate_recipe_outputs "${FEEDSTOCK_NAME}"
