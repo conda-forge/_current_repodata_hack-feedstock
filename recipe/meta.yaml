@@ -1,6 +1,6 @@
 package:
   name: _current_repodata_hack
-  version: 0.0.2
+  version: 0.0.3
 
 build:
   number: 0
@@ -16,8 +16,10 @@ outputs:
     requirements:
       run:
       - libgcc-devel_linux-64 7.5.*
-      - gcc_linux-64 7.5.*
-      - gcc_impl_linux-64 7.5.*
+      {% for cmp in ["gcc", "gxx", "gfortran"] %}
+      - {{ cmp }}_linux-64 7.5.*
+      - {{ cmp }}_impl_linux-64 7.5.*
+      {% endfor %}
 
   - name: _current_repodata_hack_gcc_linux_64_84
     build:
@@ -25,8 +27,10 @@ outputs:
     requirements:
       run:
       - libgcc-devel_linux-64 8.4.*
-      - gcc_linux-64 8.4.*
-      - gcc_impl_linux-64 8.4.*
+      {% for cmp in ["gcc", "gxx", "gfortran"] %}
+      - {{ cmp }}_linux-64 8.4.*
+      - {{ cmp }}_impl_linux-64 8.4.*
+      {% endfor %}
   
   - name: _current_repodata_hack_gcc_linux_aarch64_75
     build:
@@ -34,8 +38,10 @@ outputs:
     requirements:
       run:
       - libgcc-devel_linux-aarch64 7.5.*
-      - gcc_linux-aarch64 7.5.*
-      - gcc_impl_linux-aarch64 7.5.*
+      {% for cmp in ["gcc", "gxx", "gfortran"] %}
+      - {{ cmp }}_linux-aarch64 7.5.*
+      - {{ cmp }}_impl_linux-aarch64 7.5.*
+      {% endfor %}
   
   - name: _current_repodata_hack_gcc_linux_aarch64_84
     build:
@@ -43,8 +49,10 @@ outputs:
     requirements:
       run:
       - libgcc-devel_linux-aarch64 8.4.*
-      - gcc_linux-aarch64 8.4.*
-      - gcc_impl_linux-aarch64 8.4.*
+      {% for cmp in ["gcc", "gxx", "gfortran"] %}
+      - {{ cmp }}_linux-aarch64 8.4.*
+      - {{ cmp }}_impl_linux-aarch64 8.4.*
+      {% endfor %}
   
   - name: _current_repodata_hack_gcc_linux_ppc64le_75
     build:
@@ -52,8 +60,10 @@ outputs:
     requirements:
       run:
       - libgcc-devel_linux-ppc64le 7.5.*
-      - gcc_linux-ppc64le 7.5.*
-      - gcc_impl_linux-ppc64le 7.5.*
+      {% for cmp in ["gcc", "gxx", "gfortran"] %}
+      - {{ cmp }}_linux-ppc64le 7.5.*
+      - {{ cmp }}_impl_linux-ppc64le 7.5.*
+      {% endfor %}
   
   - name: _current_repodata_hack_gcc_linux_ppc64le_84
     build:
@@ -61,8 +71,10 @@ outputs:
     requirements:
       run:
       - libgcc-devel_linux-ppc64le 8.4.*
-      - gcc_linux-ppc64le 8.4.*
-      - gcc_impl_linux-ppc64le 8.4.*
+      {% for cmp in ["gcc", "gxx", "gfortran"] %}
+      - {{ cmp }}_linux-ppc64le 8.4.*
+      - {{ cmp }}_impl_linux-ppc64le 8.4.*
+      {% endfor %}
 
 about:
   home: https://github.com/conda-forge/_current_repodata_hack-feedstock
